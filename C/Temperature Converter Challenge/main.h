@@ -10,6 +10,7 @@
 
 void prompt(int *lower, int *higher);
 bool validate(int lower, int higher);
+double convertToFahrenheit(int val);
 
 
 #endif /* MAIN_H_ */

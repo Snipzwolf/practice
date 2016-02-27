@@ -19,7 +19,15 @@ int main( void ){
 		prompt(&lower, &higher);
 	}while(!validate(lower, higher));
 
-	printf("Lower limit is '%d'\n Higher limit is '%d", lower, higher);
+	printf("Lower limit is '%d'\nHigher limit is '%d", lower, higher);
+
+	printf("\n\n");
+	printf("Celsius\t\tFahrenheit\n");
+	printf("---------\t---------\n");
+	while(lower <= higher){
+		printf("%d\t\t%f\n", lower, convertToFahrenheit(lower));
+		lower+=4;
+	}
 
 	return 0;
 }
@@ -50,6 +58,10 @@ bool validate(int lower, int higher){
 	}
 
 	return ret;
+}
+
+double convertToFahrenheit(int val){
+	return (double)val * (9.0/5.0) + 32.0;
 }
 
 
