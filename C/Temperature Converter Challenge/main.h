@@ -8,8 +8,8 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-void prompt(int *lower, int *higher);
-bool validate(int lower, int higher);
+void prompt(int *lower, int *higher, int *step);
+bool validate(int lower, int higher, int step);
 double convertToFahrenheit(int val);
 
 
