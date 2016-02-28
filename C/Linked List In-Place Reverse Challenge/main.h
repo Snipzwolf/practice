@@ -15,8 +15,10 @@ struct LinkedListNode{
 
 typedef struct LinkedListNode LinkedList;
 
+
 bool getNewNode( LinkedList **listPtr );
 void createList(LinkedList **strNode);
 void printList(LinkedList *list);
+LinkedList * reverseList(LinkedList *curNode, LinkedList *prevNode);
 
 #endif /* MAIN_H_ */

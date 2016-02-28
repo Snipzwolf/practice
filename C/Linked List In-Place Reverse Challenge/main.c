@@ -14,10 +14,11 @@ int main( void ){
 	LinkedList *list = NULL;
 
 	if(getNewNode(&list)){
-
 		createList(&list);
 		printList(list);
 
+		list = reverseList(list, NULL);
+		printList(list);
 	}else{
 		return 1;
 	}
@@ -65,5 +66,26 @@ void printList(LinkedList *list){
 	if(list->next != NULL){
 		printf(",");
 		printList(list->next);
+		return;
 	}
+
+	printf("\n");
+}
+
+LinkedList * reverseList(LinkedList *curNode, LinkedList *prevNode){
+	LinkedList *next = curNode->next;
+	if(prevNode != NULL){
+		curNode->next = prevNode;
+	}else{
+		curNode->next = NULL;
+	}
+
+	if(next != NULL){
+		LinkedList *ret = reverseList(next, curNode);
+
+		return ret;
+	}
+
+	return curNode;
+
 }
