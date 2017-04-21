@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Film_Library_Project.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +26,15 @@ namespace Film_Library_Project.Services
                 { "plot", "full" },
                 { "r", "json" }
             });
+
+            return null;
         }
 
         private HttpWebRequest getApiUri(Dictionary<String, String> qs)
         {
             UriBuilder requestUri = new UriBuilder(apiUri);
 
-            requestUri.Path = path;
+            //requestUri.Path = path;
             if(qs.Count > 0)
             {
                 StringBuilder sb = qs.Aggregate(new StringBuilder(), (a, b) => {
