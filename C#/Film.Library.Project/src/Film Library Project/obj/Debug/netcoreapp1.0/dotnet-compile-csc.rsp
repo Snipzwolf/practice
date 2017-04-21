@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\bin\Debug\netcoreapp1.0\Film Library Project.dll"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"Z:\practice\C#\Film Library Project\src\Film Library Project\bin\Debug\netcoreapp1.0\Film Library Project.dll"
 -r:"C:\Users\idgukdev\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\idgukdev\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\idgukdev\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -164,9 +164,10 @@
 -r:"C:\Users\idgukdev\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\idgukdev\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\idgukdev\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\obj\Debug\netcoreapp1.0\Film Library Projectdotnet-compile.deps.json",Film Library Project.deps.json
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\Program.cs"
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\Startup.cs"
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\Controllers\MovieController.cs"
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\Models\Movie.cs"
-"c:\users\idgukdev\documents\visual studio 2015\Projects\Film Library Project\src\Film Library Project\Services\OmdbApiService.cs"
+-resource:"Z:\practice\C#\Film Library Project\src\Film Library Project\obj\Debug\netcoreapp1.0\Film Library Projectdotnet-compile.deps.json",Film Library Project.deps.json
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Program.cs"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Startup.cs"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Controllers\MovieController.cs"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Models\Genre.cs"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Models\Movie.cs"
+"Z:\practice\C#\Film Library Project\src\Film Library Project\Services\OmdbApiService.cs"
