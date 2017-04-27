@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Film_Library_Project.Serializers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -24,7 +26,8 @@ namespace Film_Library_Project.Models
         public DateTime Released { get; set; }
 
         [DataMember]
-        public TimeSpan RunTime { get; set; }
+        [JsonConverter(typeof(RuntimeSerializer))]
+        public TimeSpan Runtime { get; set; }
 
         [DataMember]
         public HashSet<Genre> Genres { get; set; }

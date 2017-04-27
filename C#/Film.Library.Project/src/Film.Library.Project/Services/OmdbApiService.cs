@@ -31,14 +31,12 @@ namespace Film_Library_Project.Services
 
             Task<WebResponse> resTask = request.GetResponseAsync();
             
-
             await resTask.ConfigureAwait(false);
             
             Movie ret;
             using (StreamReader sr = new StreamReader(resTask.Result.GetResponseStream()))
             {
-                String response = sr.ReadToEnd();
-                ret = JsonConvert.DeserializeObject<Movie>(response);
+                ret = JsonConvert.DeserializeObject<Movie>(sr.ReadToEnd());
             }
 
             return ret;
