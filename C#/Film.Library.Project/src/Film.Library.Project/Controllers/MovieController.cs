@@ -30,8 +30,8 @@ namespace Film_Library_Project.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
-            return new ObjectResult(new string[] { "ss"});
-            return new ObjectResult(apiService.getMovieByImdbId(id));
+            return new ObjectResult(apiService.getMovieByImdbId(id).Result);
+            //return new ObjectResult(apiService.getMovieByImdbId(id));
         }
 
         // POST api/movie

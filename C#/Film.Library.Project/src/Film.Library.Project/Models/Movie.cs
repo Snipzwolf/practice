@@ -18,7 +18,7 @@ namespace Film_Library_Project.Models
         public string ImdbId { get; set; }
 
         [DataMember]
-        public string Name { get; set; }
+        public string Title { get; set; }
 
         [DataMember]
         public DateTime Released { get; set; }

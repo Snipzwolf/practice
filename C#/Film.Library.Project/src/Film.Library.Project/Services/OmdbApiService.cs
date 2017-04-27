@@ -1,7 +1,9 @@
 ﻿using Film_Library_Project.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -18,7 +20,7 @@ namespace Film_Library_Project.Services
             apiUri = new UriBuilder("http", "www.omdbapi.com", 80).Uri;
         }
 
-        public Movie getMovieByImdbId(string id)
+        public async Task<Movie> getMovieByImdbId(string id)
         {
             HttpWebRequest request = getApiUri(new Dictionary<string, string>(){
                 { "i",  id },
@@ -27,7 +29,19 @@ namespace Film_Library_Project.Services
                 { "r", "json" }
             });
 
-            return null;
+            Task<WebResponse> resTask = request.GetResponseAsync();
+            
+
+            await resTask.ConfigureAwait(false);
+            
+            Movie ret;
+            using (StreamReader sr = new StreamReader(resTask.Result.GetResponseStream()))
+            {
+                String response = sr.ReadToEnd();
+                ret = JsonConvert.DeserializeObject<Movie>(response);
+            }
+
+            return ret;
         }
 
         private HttpWebRequest getApiUri(Dictionary<String, String> qs)
@@ -41,9 +55,9 @@ namespace Film_Library_Project.Services
                     if (a.Length > 0)
                     {
                         a.Append("&");
-                    }                        
+                    }   
 
-                    a.Append(b); //TODO maybe url encode??
+                    a.Append(b.Key).Append("=").Append(b.Value); //TODO maybe url encode??
                     return a;
                 });
 
